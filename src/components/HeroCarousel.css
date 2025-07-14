@@ -1,0 +1,27 @@
+.carousel-img {
+  height: 480px;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.carousel-caption {
+  bottom: 20%;
+}
+
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.carousel-overlay {
+  position: relative;
+}
+
+.carousel-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}

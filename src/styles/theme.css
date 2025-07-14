@@ -1,0 +1,110 @@
+/* theme.css - Seamless Netflix Clone Dark/Light Theme */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Common styles */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  min-height: 80vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode */
+body.light, .light {
+  background-color: #f5f5f5;
+  color: #1c1c1c;
+}
+
+.light .container {
+  background-color: #f5f5f5;
+}
+
+.light .navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.light .card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.light .nav-link {
+  color: #333;
+}
+.light .nav-link:hover {
+  color: #0077cc;
+}
+
+/* Dark mode */
+body.dark, .dark {
+  background-color: #181818;
+  color: #eaeaea;
+}
+
+.dark .container {
+  background-color: #181818; /* Make container match dark bg */
+}
+
+.dark .navbar {
+  background-color: #121212 !important;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.03);
+}
+
+.dark .card {
+  background-color: #232323;
+  border: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.03);
+}
+
+.dark .nav-link {
+  color: #cccccc !important;
+}
+.dark .nav-link:hover {
+  color: #33aaff !important;
+}
+
+.dark .btn {
+  background-color: #333;
+  color: white;
+}
+
+/* Headings */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #850007 !important;
+}
+
+h1, h2, h3 {
+  color: #00517c;
+  font-weight: 700;
+}
+
+/* Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #e50914;
+}
+
+/* Utility */
+a {
+  text-decoration: none;
+}
+
+.dark p, 
+.dark h4, 
+.dark span {
+  color: #ddd;
+}
+
+.dark .text-muted {
+  color: #aaa !important;
+}

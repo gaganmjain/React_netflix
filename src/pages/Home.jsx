@@ -10,17 +10,23 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [favList, setFavList] = useState(JSON.parse(localStorage.getItem('favs') || '[]'));
 
-  useEffect(function () {
-    fetch('/movies.json')
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (data) {
-        setAll(data);
-        setDisplay(data);
-        setLoading(false);
-      });
-  }, []);
+useEffect(() => {
+  fetch(`${import.meta.env.BASE_URL}movies.json`)
+    .then((res) => {
+      if (!res.ok) throw new Error('Failed to fetch movies');
+      return res.json();
+    })
+    .then((data) => {
+      setAll(data);
+      setDisplay(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
+
 
   function onSearch(term) {
     const filtered = all.filter(function (m) {

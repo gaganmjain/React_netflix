@@ -5,12 +5,11 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import MovieDetails from './pages/MovieDetails';
-import './styles/theme.css';
 
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/React_netflix">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

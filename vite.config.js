@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/React_netflix/', 
+  base: process.env.VITE_BASE_PATH || "/React_netflix/", 
 });

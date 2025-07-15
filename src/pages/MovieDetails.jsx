@@ -6,7 +6,7 @@ function MovieDetails() {
   const [movie, setMovie] = useState(null);
 
   useEffect(function () {
-    fetch('/movies.json')
+    fetch(import.meta.env.BASE_URL + 'movies.json')
       .then(function (res) {
         return res.json();
       })

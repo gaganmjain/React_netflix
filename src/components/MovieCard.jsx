@@ -19,7 +19,7 @@ function MovieCard({ movie, isFav, onFavToggle }) {
         <button
           className={`fav-btn ${isFav ? 'active' : ''}`}
           onClick={(e) => {
-            e.stopPropagation(); // Prevent navigation on button click
+            e.stopPropagation(); 
             onFavToggle(movie);
           }}
         >

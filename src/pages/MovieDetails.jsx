@@ -7,6 +7,7 @@ function MovieDetails() {
 
   useEffect(function () {
     fetch(import.meta.env.BASE_URL + 'movies.json')
+
       .then(function (res) {
         return res.json();
       })
